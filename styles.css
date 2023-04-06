@@ -1,0 +1,162 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: 'Major Mono Display', monospace !important;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+.board{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 75px 10px 20px 10px;
+    background: #e0e0e0;
+    box-shadow:  6px 6px 6px #5a5a5a, -6px -6px 6px #ffffff;
+    border-radius: 50px;
+
+}
+.board-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  4px 4px 6px #5a5a5a, -4px -4px 6px #f0f0f0;
+    text-align: center;
+    line-height: 60px;
+    font-weight: lighter;
+    font-size: 45px;
+    user-select: none;
+    cursor: pointer;
+}
+.button:active{
+    backdrop-filter: none;
+    box-shadow: none;
+    border-color: #bbb;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 40px;
+}
+.c-buttons{
+    background: linear-gradient(145deg, #dacaca, #f0f0f0) !important;
+    color: #f66 !important;
+    font-size: 35px !important;
+}
+.c-buttons:active{
+    box-shadow: 0 0 15px #f99, inset 0 0 5px #f99;
+    border-color: #f66;
+    font-size: 33px !important;
+}
+.display{
+    height: 80px;
+    min-width: 250px;
+    background: linear-gradient(145deg, #cacaca, #cdcdcd);
+    box-shadow: inset 3px 3px 5px #777, -3px -3px 5px #ffffff;
+    border-radius: 100px;
+    line-height: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: end;
+    font-weight: bold;
+    color: #f44;
+    text-shadow: 0px 0px 15px ;
+    font-size: 45px;
+    overflow: hidden;
+}
+.control-board{
+    display: flex;
+
+    flex-direction: row;
+}
+
+.hidden{
+    visibility: hidden !important;
+}
+
+
+
+
+
+
+
+.slider {
+    
+    background: linear-gradient(145deg, #cacaca, #cdcdcd);
+    border-radius: 100px;
+    padding: 1px;
+    margin: 10px;
+    
+    cursor: pointer;
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 29px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+          #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+            box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, rgba(0, 0, 0, 0.21) 0px 0px 0px 24px inset,
+          #22cc3f 0px 0px 0px 0px inset, rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  }
+  
+  
+  .slider::after {
+    
+    content: "";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 2.3px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #e3e3e3;
+    border-radius: 200px;
+    position: absolute;
+    -webkit-box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+            box-shadow: transparent 0px 0px 0px 2px, rgba(0, 0, 0, 0.3) 0px 6px 6px;
+    -webkit-transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    transition: left 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s, background-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    will-change: left, background-color;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+          rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+            box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px inset, #22cc3f 0px 0px 0px 2px inset, #22cc3f 0px 0px 0px 24px inset,
+          rgba(224, 224, 224, 0.45) 0px 1px 0px 0px;
+  }
+  
+  .switch input[type="checkbox"]:checked + .slider::after {
+    left: 24px;
+  }
+  
+  .switch input[type="checkbox"] {
+    display: none;
+  }
+  
